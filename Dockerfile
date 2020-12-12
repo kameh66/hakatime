@@ -64,9 +64,9 @@ RUN apk add --no-cache \
 COPY --from=dashboard-builder /usr/src/app/dist /app/bin/dashboard
 COPY --from=server-builder /app/bin/hakatime /app/bin/hakatime
 
-EXPOSE 8080
+EXPOSE 443
 
-ENV HAKA_PORT           8080
+ENV HAKA_PORT           443
 ENV HAKA_DASHBOARD_PATH /app/bin/dashboard
 
 CMD ["/app/bin/hakatime", "run"]
