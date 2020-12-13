@@ -32,3 +32,5 @@ services:
 
 volumes:
   deploy_db_data: {}
+- name: Deploy Docker Image to Heroku App
+  uses: jctaveras/heroku-deploy@v2.1.1
